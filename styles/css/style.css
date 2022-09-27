@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+aside .navbar .container-fluid, aside .navbar-expand-md .navbar-collapse,
+aside .navbar-expand-md .navbar-nav {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-nav, .navbar-collapse {
+  width: 100%;
+}
+
+aside .nav-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  box-shadow: rgb(255, 148, 148) 5px 5px 20px;
+  border-radius: 10px;
+  color: rgb(195, 135, 61);
+  cursor: pointer;
+}
+
+aside .nav-item a {
+  color: rgb(255, 255, 255);
+}
+
+.carrousel {
+  border-bottom: solid 30px;
+}
+
+.footer {
+  border-top: solid 30px;
+}
+
+.carrou {
+  align-self: center;
+}
+
+.tarj {
+  position: relative;
+  z-index: -100;
+  box-shadow: rgb(255, 148, 148) -10px -10px 10px;
+  border-radius: 10px;
+  color: rgb(195, 135, 61);
+  align-items: center;
+}
+
+.tarj p {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  overflow: hidden;
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: 100%;
+    width: 1000px;
+    height: 40px;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+.carro {
+  position: relative;
+}
+
+.carroC{
+  
+  border: 2px solid black;
+  width: 50px;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carritodiv{
+  
+  width: 200px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+
+svg, rect {
+  position: absolute;
+  fill: transparent;
+  left: 0px;
+  border-radius: 10px 10px 10px 10px;
+  z-index: -100;
+}
+
+#btnfiltro{
+  display: none;
+}
+
+rect {
+  stroke: #a18e99;
+  stroke-width: 10;
+  stroke-dasharray: 100;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dasharray: 800;
+  }
+}
+.carta {
+  height: 280px;
+  width: 200px;
+  text-align: center;
+  margin: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  backface-visibility: hidden;
+  -webkit-perspective: 700;
+}
+
+.card_sup {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  box-shadow: rgb(8, 8, 8) -5px -5px 20px;
+  border-radius: 5px;
+}
+
+.card-sup-1 {
+  transition: all 1s ease-in-out;
+  animation-duration: 3s;
+  animation-name: anime;
+  animation-iteration-count: 2;
+}
+
+@keyframes anime {
+  from {
+    transform: rotateY(180deg);
+  }
+}
+.imagen_prod {
+  width: 150px;
+  border-radius: 5px;
+  box-shadow: rgb(8, 8, 8) 0px 3px 4px;
+  border: solid rgb(174, 168, 168) 4px;
+}
+
+.card_sup:hover {
+  transform: rotateY(180deg);
+}
+
+.card_sup p {
+  font-size: 15px;
+}
+
+.lado {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.frente {
+  background-image: radial-gradient(circle at 43.25% 48.19%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+}
+
+.atras {
+  --opacidad-negro: 0.3;
+  background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/imagen-tela-colores.jpg);
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.atras span {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card_inf {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  background-image: radial-gradient(circle at 50% -20.71%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+  height: 50px;
+  box-shadow: rgb(29, 28, 28) 5px 5px 20px;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 20px;
+  border: solid rgb(174, 168, 168) 4px;
+  box-shadow: rgb(8, 8, 8) 0px 3px 4px;
+}
+
+button span {
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+@media (max-width: 480px) {
+  .carta {
+    height: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .lado {
+    position: relative;
+    height: 120px;
+    border-radius: 0%;
+  }
+  .card_sup {
+    position: relative;
+    border: double 5px;
+  }
+  .frente {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .card_sup:hover {
+    transform: none;
+  }
+  .atras {
+    transform: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: radial-gradient(circle at 43.25% 48.19%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+  }
+  .atras span {
+    color: #463838;
+    border-radius: 10px;
+    border: solid 2px;
+  }
+  .imagen_prod {
+    width: 130px;
+  }
+  @keyframes anime {
+    from {
+      transform: none;
+    }
+  }
+}
+body {
+  --opacidad-negro: 0.5;
+  background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/textura-tela-blanca-fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-attachment: fixed;
+}
+
+.logoM {
+  width: 40px;
+  height: 50px;
+}
+
+.contenedorI {
+  height: 450px;
+  width: 100%;
+}
+
+.contenedorI img {
+  height: 100%;
+  width: 100%;
+}
+
+aside, aside nav {
+  background: none;
+}
+
+.divaside {
+  background: none;
+}
+
+a {
+  z-index: 100;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  text-decoration: underline 8px;
+}
+
+.texto {
+  text-shadow: rgb(150, 150, 150) 5px 5px 5px;
+  animation: mianimacion 4s ease-in-out 0s infinite normal none;
+}
+
+@keyframes mianimacion {
+  0% {
+    color: rgb(255, 255, 255);
+  }
+  50% {
+    color: #FF0000;
+  }
+  100% {
+    color: #4616e5;
+  }
+}
+.main_p {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.div-of {
+  position: relative;
+  width: 500px;
+}
+
+.card-img-top {
+  margin-top: 10px;
+}
+
+.card-img-bottom {
+  margin-bottom: 10px;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.imag_nov {
+  width: 30%;
+  height: 140px;
+  border: double 5px;
+}
+
+.accordion-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.container-fluid {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

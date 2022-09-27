@@ -1,0 +1,112 @@
+
+@use './reset.scss';
+@use './bootstrap.scss';
+@use './animation.scss';
+@use './tarjeta.scss';
+@use './colores';
+@use './flexs';
+
+
+body{
+    --opacidad-negro: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/textura-tela-blanca-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+.logoM{
+    width: 40px;
+    height: 50px;
+}
+
+.contenedorI{
+    height: 450px;
+    width: 100%;
+}
+
+.contenedorI img{
+    height: 100%;
+    width: 100%;
+}
+
+aside, aside nav{
+    background: none;
+}
+
+.divaside{
+    background: none;
+}
+
+a{
+    z-index: 100;
+}
+
+h2{
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+    text-decoration: underline 8px;
+}
+
+.texto{
+    text-shadow: (colores.$b-color) 5px 5px 5px;
+    animation: mianimacion 4s ease-in-out 0s infinite normal none;
+}
+
+@keyframes mianimacion { 
+    0% { 
+    color: colores.$color-W; 
+    } 
+    50% { 
+    color: colores.$color-Bv; 
+    } 
+    100% { 
+    color: colores.$color-1; 
+    } 
+} 
+
+.main_p{
+    @include flexs.flex_R;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.div-of{
+    position: relative;
+    width: 500px;
+    
+}
+
+.card-img-top{
+    margin-top: 10px;
+}
+
+.card-img-bottom{
+    margin-bottom: 10px;
+}
+
+.wave{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.imag_nov{
+    width: 30%;
+    height: 140px;
+    border: double 5px;
+}
+
+.accordion-body{
+    @include flexs.flex_R;
+    justify-content: space-between;
+}
+
+.container-fluid{
+    text-align: center;
+}
+

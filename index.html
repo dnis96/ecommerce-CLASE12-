@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pagina web dedicada a la venta de productos de merceria (incluye fotos de productos, ubicacion del local, contacto y sobre nosotros">
+    <meta name="keywords" content="merceria, telas, fabrics, buttons, perfumes, agujas, needles, cintas, ribbons, 
+    haberdashery, lana, wool">
+    <title>MERCERIA DEL VALLE</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/css/style.css">
+</head>
+<body >
+    <!--NAVBAR-->
+    <nav class="container-fluid navbar navbar-expand-md navbar-dark bg-primary ">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img class="logoM d-inline-block align-text-top" src="img/logo_merceria.jpg" alt="logo" class="d-inline-block align-text-top">
+                Merceria del Valle
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"     aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+                    
+                
+                </div>
+                <div class="flex-column d-flex align-items-center carritodiv" >
+                    Carrito de Compra
+                    <img class="carroC" id="carritoimg" src="./img/carro-de-la-compra.png" alt="carritoCompra" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Tu Compra</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="terminarCompra">Terminar Comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+    </nav>
+    <!--CARROUSEL-->
+    <div id="carouselExampleSlidesOnly " class="carousel slide carr carrousel carro" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active contenedorI">
+                <img src="img/merceria local.jpg" class="d-block w-100 IM " alt="merceria_local">
+            </div>
+            <div class="carousel-item contenedorI">
+                <img src="img/merceria1.jpg" class="d-block w-100 IM " alt="imagen_merceria">
+            </div>
+            <div class="carousel-item contenedorI">
+                <img src="img/merceria2.jpg" class="d-block w-100 IM " alt="imagen_merceria">
+            </div>
+        </div>
+        <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280">
+            <path fill="#202428" fill-opacity="1.0" d="M0,64L17.1,96C34.3,128,69,192,103,224C137.1,256,171,256,206,266.7C240,277,274,299,309,309.3C342.9,320,377,320,411,304C445.7,288,480,256,514,240C548.6,224,583,224,617,213.3C651.4,203,686,181,720,154.7C754.3,128,789,96,823,90.7C857.1,85,891,107,926,144C960,181,994,235,1029,256C1062.9,277,1097,267,1131,250.7C1165.7,235,1200,213,1234,224C1268.6,235,1303,277,1337,272C1371.4,267,1406,213,1423,186.7L1440,160L1440,320L1422.9,320C1405.7,320,1371,320,1337,320C1302.9,320,1269,320,1234,320C1200,320,1166,320,1131,320C1097.1,320,1063,320,1029,320C994.3,320,960,320,926,320C891.4,320,857,320,823,320C788.6,320,754,320,720,320C685.7,320,651,320,617,320C582.9,320,549,320,514,320C480,320,446,320,411,320C377.1,320,343,320,309,320C274.3,320,240,320,206,320C171.4,320,137,320,103,320C68.6,320,34,320,17,320L0,320Z"></path>
+        </svg>
+    </div>
+    <!--ASUDE Y MAIN-->
+    <div class="container-fluid row ">
+        <aside class="col-md-3 aside-nav">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid divaside">
+                  <a class="navbar-brand">FILTRAR POR</a>
+                  
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <svg width="100%" height="100%"><rect width="100%" height="100%" ></rect></svg>
+                        <a class="nav-link">hilos</a>
+                      </li>
+                      <li class="nav-item">
+                        <svg width="100%" height="100%"><rect width="100%" height="100%" ></rect></svg>
+                        <a class="nav-link">botones</a>
+                      </li>
+                      <li class="nav-item">
+                        <svg width="100%" height="100%"><rect width="100%" height="100%" ></rect></svg>
+                        <a class="nav-link">cintas</a>
+                      </li>
+                    </ul>
+                    <button id="btnfiltro">dejar de filtrar</button>
+                </div>
+            </nav>
+            
+        </aside>
+        <main class="col-md-9 ">
+            <h2>PRODUCTOS</h2>
+            <div class="main_p" id="menu">
+                
+            </div>
+            
+            
+        </main>
+    </div>
+    <!--FOOTER-->
+    <footer class="text-center footer-style">
+        <div class="container">
+            <div class="row footer">
+                <div class="col-md-4 footer-col">
+                    <h3>Dirección</h3>
+                    <p>
+                        San Carlos - Salta - Argentina <br />
+                    </p>
+                </div>
+                <div class="col-md-4 footer-col">
+                    <h3>Trabajo FreeLancer</h3>
+                    <p>&copy; Derechos Reservados 2022</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="./js/productos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="js/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    
+</body>
+</html>

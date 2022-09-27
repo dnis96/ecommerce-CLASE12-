@@ -1,0 +1,156 @@
+@use './colores';
+@use './flexs';
+
+.carta{
+    height: 280px;
+    width: 200px;
+    text-align: center;
+    margin: 6px;
+    @include flexs.flex_C;
+    justify-content: space-around;
+    backface-visibility: hidden;
+    -webkit-perspective: 700;
+}
+
+
+.card_sup{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    box-shadow: colores.$color-2 -5px -5px 20px;
+    border-radius: 5px;
+    
+}
+
+.card-sup-1{
+    transition: all 1s ease-in-out;
+    animation-duration: 3s;
+    animation-name: anime;
+    animation-iteration-count: 2;
+}
+
+@keyframes anime{
+
+    from{
+        transform: rotateY(180deg);
+    }
+}   
+
+.imagen_prod{
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: colores.$color-2 0px 3px 4px;
+    border: solid colores.$color-3 4px;
+}
+
+
+.card_sup:hover{
+    transform: rotateY(180deg);
+    
+}
+
+.card_sup p{
+    font-size: 15px;
+}
+.lado{
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.frente{
+    background-image: radial-gradient(circle at 43.25% 48.19%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+}
+
+.atras{
+    --opacidad-negro: 0.3;
+    background-image:linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url(../../img/imagen-tela-colores.jpg);
+    transform: rotateY(180deg);
+    @include flexs.flex_C;
+    
+    justify-content: center;
+
+}
+
+.atras span{
+    color: colores.$color-W;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.card_inf{
+    @include flexs.flex_R;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-image: radial-gradient(circle at 50% -20.71%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+    height: 50px;
+    box-shadow: colores.$color-4 5px 5px 20px;
+    border-radius: 5px;
+    
+}
+
+button{
+    border-radius: 20px;
+    border: solid colores.$color-3 4px;
+    box-shadow: colores.$color-2 0px 3px 4px;
+}
+
+button span{
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+
+@media (max-width: 480px){
+    .carta{
+        height: 280px;
+        width: 100%;
+        @include flexs.flex_C;
+        justify-content: space-around;
+    }
+    
+    .lado{
+        position: relative;
+        height: 120px;
+        border-radius: 0%;
+    }
+    .card_sup{
+        position: relative;
+        border: double 5px;
+    }
+    .frente{
+        @include flexs.flex_R;
+        align-items: center;    
+    }
+    .card_sup:hover{
+        transform: none;
+    }
+    .atras{
+        transform: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-image: radial-gradient(circle at 43.25% 48.19%, #eaffff 0, #e3faf8 16.67%, #d8e5e3 33.33%, #c9c9c9 50%, #b9aeb2 66.67%, #ab9ba2 83.33%, #a18e99 100%);
+        span{
+            color: colores.$color-5;
+            border-radius: 10px;
+            border: solid 2px;
+        }
+    }
+    .imagen_prod{
+        width: 130px;
+    }
+    @keyframes anime{
+
+        from{
+            transform: none;
+        }
+    } 
+}
