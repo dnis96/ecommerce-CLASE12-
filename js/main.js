@@ -7,6 +7,21 @@ localStorage.setItem('listaProductos', JSON.stringify(productos));
 let listProdcuts;
 localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
 
+var bgColors = [
+    "linear-gradient(to right, #00b09b, #96c93d)",
+    "linear-gradient(to right, #ff5f6d, #ffc371)",
+  ],
+ k = 0;
+
+function mensaje(){
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Su compra ha sido completada. Gracias por Comprar',
+        showConfirmButton: false,
+        timer: 1500
+      })
+}
 
 class ProductoComprado {
   constructor(producto, cantidad, precio) {
@@ -114,6 +129,7 @@ function crearCard(productos) {
             productos[i].precio * numero
           );
           arrayCarrito.push(ProductoC);
+          
         } else {
           let encontrado = arrayCarrito.findIndex(
             (element) => element.producto === productos[i].nombre
@@ -134,14 +150,24 @@ function crearCard(productos) {
               arrayCarrito[encontrado].precio + productos[i].precio * numero;
           }
         }
-      }
-
+        }
       if (productos[i].cantidad === 0) {
         cardss[i].style.display = "none";
       }
       console.log(arrayCarrito);
       localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
     });
+    agregarC[i].addEventListener('click',function() {
+        Toastify({
+          text: "El producto se agrego a su carrito",
+          duration: 3000,
+          //gravity: "top", // `top` or `bottom`
+          //position: "left", // `left`, `center` or `right`
+          className:'element'
+        }).showToast();
+        k++;
+    });
+    
   }
 }
 
@@ -154,7 +180,7 @@ let btnTerminarCompra = document.getElementById('terminarCompra');
 btnTerminarCompra.addEventListener('click', () =>{
     let arraycarrito = [];
     localStorage.setItem('listaCarrito', JSON.stringify(arraycarrito));
-    alert('GRACIAS POR COMPRAR');
+    mensaje();
 });
 
 function cargarModal() {
@@ -205,6 +231,7 @@ function llamarCrearCard(){
     listProdcuts = JSON.parse(localStorage.getItem('listaProductos'));
     crearCard(listProdcuts);
 }
+
 
 llamarCrearCard();
 //console.log(botones);
