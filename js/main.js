@@ -13,9 +13,10 @@ var bgColors = [
   ],
  k = 0;
 
+//agregando sweetalert 
 function mensaje(){
     Swal.fire({
-        position: 'top-end',
+        position: 'top-center',
         icon: 'success',
         title: 'Su compra ha sido completada. Gracias por Comprar',
         showConfirmButton: false,
@@ -158,6 +159,7 @@ function crearCard(productos) {
       localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
     });
     agregarC[i].addEventListener('click',function() {
+        //agregando toastify
         Toastify({
           text: "El producto se agrego a su carrito",
           duration: 3000,
