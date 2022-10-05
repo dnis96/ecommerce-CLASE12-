@@ -10,7 +10,7 @@ localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
 
 //utilizando fetch para traer los productos
 const obtener = async () =>{
-  let obt = await fetch('products.json');
+  let obt = await fetch('../products.json');
   console.log(obt);
   let obtiene = await obt.json();
   console.log(obtiene);
