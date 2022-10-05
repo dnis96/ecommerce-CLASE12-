@@ -3,9 +3,22 @@ let menuProductos = document.getElementById("menu");
 let botones;
 let cards;
 let arrayCarrito = [];
-localStorage.setItem('listaProductos', JSON.stringify(productos));
+//localStorage.setItem('listaProductos', JSON.stringify(productos));
 let listProdcuts;
 localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
+
+
+//utilizando fetch para traer los productos
+const obtener = async () =>{
+  let obt = await fetch('/js/products.json');
+  console.log(obt);
+  let obtiene = await obt.json();
+  console.log(obtiene);
+  localStorage.setItem('listaProductos', JSON.stringify(obtiene));
+  llamarCrearCard();
+};
+
+obtener();
 
 var bgColors = [
     "linear-gradient(to right, #00b09b, #96c93d)",
@@ -235,6 +248,6 @@ function llamarCrearCard(){
 }
 
 
-llamarCrearCard();
+//llamarCrearCard();
 //console.log(botones);
 //console.log(cards);
