@@ -1,5 +1,5 @@
 let contactos= [];
-
+//cada vez que el usuario envia su contacto se guarda en el local storage
 let form = document.querySelector('form');
 form.addEventListener('submit', (event) =>{
     

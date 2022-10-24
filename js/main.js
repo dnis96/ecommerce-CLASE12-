@@ -5,12 +5,13 @@ let cards;
 let arrayCarrito = [];
 //localStorage.setItem('listaProductos', JSON.stringify(productos));
 let listProdcuts;
+//creamos en el local estorage un carrito de compras
 localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
 
 
-//utilizando fetch para traer los productos
+//utilizando fetch para traer los productos y luego lo guardamos en el local storage
 const obtener = async () =>{
-  let obt = await fetch('../products.json');
+  let obt = await fetch("./productos.js");
   console.log(obt);
   let obtiene = await obt.json();
   console.log(obtiene);
@@ -186,6 +187,7 @@ function crearCard(productos) {
   }
 }
 
+//carga todas los porductos que el usuario agrega a su carrito
 let botonCarrito = document.getElementById("carritoimg");
 botonCarrito.addEventListener("click", () => {
   cargarModal();
