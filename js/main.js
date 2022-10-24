@@ -11,15 +11,15 @@ localStorage.setItem('listaCarrito', JSON.stringify(arrayCarrito));
 
 //utilizando fetch para traer los productos y luego lo guardamos en el local storage
 const obtener = async () =>{
-  let obt = await fetch("/products.json");
+  let obt = await fetch("./products.json");
   console.log(obt);
   let obtiene = await obt.json();
   console.log(obtiene);
   localStorage.setItem('listaProductos', JSON.stringify(obtiene));
-  llamarCrearCard();
+
 };
 
-obtener();
+llamarCrearCard(obtener);
 
 var bgColors = [
     "linear-gradient(to right, #00b09b, #96c93d)",
@@ -245,7 +245,8 @@ for (let i = 0; i<filtros.length; i++){
 }
 
 //creamos todos los productos (cards) y lo mandamos al html
-function llamarCrearCard(){
+function llamarCrearCard(callback){
+    callback();
     listProdcuts = JSON.parse(localStorage.getItem('listaProductos'));
     crearCard(listProdcuts);
 }
