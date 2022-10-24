@@ -2,7 +2,7 @@ let contactos= [];
 
 let form = document.querySelector('form');
 form.addEventListener('submit', (event) =>{
-    event.preventDefault();
+    
    /* let data = Object.fromEntries(new FormData(event.target));
     alert(JSON.stringify(data));*/
     let nombre = document.getElementById('nombre').value;
