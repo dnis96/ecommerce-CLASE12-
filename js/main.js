@@ -210,6 +210,7 @@ function cargarModal() {
                             <p>Cantidad:${cantidad}........................$${precio}</p>
                             <hr></hr>`;
   }
+  
   let div = document.createElement("div");
   div.innerHTML = `TOTAL:......................................$${total}`;
   modal[0].appendChild(div);
